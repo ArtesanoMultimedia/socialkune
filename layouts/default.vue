@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Encabezado />
     <Nuxt />
   </div>
 </template>
