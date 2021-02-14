@@ -4,7 +4,9 @@
       <div class="row mt-3 mb-5">
         <div class="col-12 col-xl">
           <!-- Hello -->
-          <h1>{{ title }}</h1>
+          <h1 :class="clase">
+            {{ title }}
+          </h1>
           <h3>{{ subtitle }}</h3>
           <Budgets :budgets="budgets" />
         </div>
@@ -30,9 +32,18 @@ export default {
       type: String,
       default: ''
     },
+    clase: {
+      type: String,
+      default: ''
+    },
     budgets: {
       type: Array,
       default: () => []
+    }
+  },
+  computed: {
+    style () {
+      return ''
     }
   }
 }

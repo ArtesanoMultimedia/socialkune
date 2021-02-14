@@ -1,9 +1,9 @@
 <template>
   <div>
     <Encabezado :logged-in="false" />
-    <Hero :title="title" :subtitle="subtitle" :budgets="budgets" />
+    <Hero :title="title" :subtitle="subtitle" :budgets="budgets" clase="home-feed" />
     <Search />
-    <PartnerList partners-title="👉 Las entidades más destacados" :partners="partnersDestacados" />
+    <PartnerList partners-title="👉 Las entidades más destacadas" :partners="partnersDestacados" />
     <PartnerList partners-title="👉 Las TOP de las 17 ODS" :partners="partnersTop17" />
   </div>
 </template>
@@ -87,7 +87,5 @@ partnersDestacados: [
 </script>
 
 <style>
-#hero h1 {
-  font-size: 60px !important;
-}
+
 </style>

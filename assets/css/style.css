@@ -76,13 +76,13 @@ input[type=button], input[type=submit], input[type=reset] {outline:0 !important;
 
 .presentation--user{
   background: #fff no-repeat padding-box;
-  position: relative; 
+  position: relative;
   z-index: 100;
 }
 
 .config--user{
   background: #f8f8f8 no-repeat padding-box;
-  position: relative; 
+  position: relative;
   z-index: 100;
   border-top: 1px solid #f5f5f5 ;
 }
@@ -159,8 +159,8 @@ a:hover {
 }
 
 .search{
-  position: relative; 
-  top: -50px; 
+  position: relative;
+  top: -50px;
   z-index: 9999;
 }
 
