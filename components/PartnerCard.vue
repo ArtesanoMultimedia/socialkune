@@ -3,7 +3,7 @@
     <div class="card shadow mb-2">
       <!--      <img src="https://via.placeholder.com/850x550" class="card-img-top" alt="...">-->
       <div class="card-body">
-        <h5 class="card-title">
+        <h5 class="card-title" style="white-space: nowrap; text-overflow: ellipsis; overflow: hidden; width: 100%">
           <img src="~/assets/img/partner.png" class="rounded mr-2" width="40" alt="User"> {{ partner.name }}
         </h5>
         <hr>

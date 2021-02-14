@@ -138,7 +138,9 @@
                       class="ml-2 rounded"
                     ><img src="~/assets/img/don-3.png" width="40px" class="ml-2 rounded">
                     <br>
-                    <NuxtLink to="/user" class="btn btn-secondary mt-4 mb-2">Ver usuario</NuxtLink>
+                    <NuxtLink to="/user" class="btn btn-secondary mt-4 mb-2">
+                      Ver usuario
+                    </NuxtLink>
                   </div>
                 </div>
               </div>
@@ -163,7 +165,9 @@
                       class="ml-2 rounded"
                     ><img src="~/assets/img/don-3.png" width="40px" class="ml-2 rounded">
                     <br>
-                    <NuxtLink to="/user" class="btn btn-secondary mt-4 mb-2">Ver usuario</NuxtLink>
+                    <NuxtLink to="/user" class="btn btn-secondary mt-4 mb-2">
+                      Ver usuario
+                    </NuxtLink>
                   </div>
                 </div>
               </div>
@@ -188,7 +192,9 @@
                       class="ml-2 rounded"
                     ><img src="~/assets/img/don-3.png" width="40px" class="ml-2 rounded">
                     <br>
-                    <NuxtLink to="/user" class="btn btn-secondary mt-4 mb-2">Ver usuario</NuxtLink>
+                    <NuxtLink to="/user" class="btn btn-secondary mt-4 mb-2">
+                      Ver usuario
+                    </NuxtLink>
                   </div>
                 </div>
               </div>
