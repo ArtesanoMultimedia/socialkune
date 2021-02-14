@@ -63,6 +63,7 @@ export default {
         user_id: 1,
         partner_id: 1
       })
+      // eslint-disable-next-line no-console
       console.log(data)
       alert(data.json)
     },

@@ -8,8 +8,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { meta: 'google-signin-client_id', content: '36734899625-cpeqvega7k86j6c71pumgkp99igegs3o.apps.googleusercontent.com' }
+      { hid: 'description', name: 'description', content: '' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -50,7 +49,8 @@ export default {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxt/http'
+    '@nuxt/http',
+    '@nuxtjs/auth-next'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -60,5 +60,14 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  auth: {
+    strategies: {
+      google: {
+        clientId: '36734899625-cpeqvega7k86j6c71pumgkp99igegs3o.apps.googleusercontent.com'
+      }
+    }
   }
+
 }

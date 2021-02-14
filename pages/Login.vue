@@ -6,7 +6,7 @@
           <div class="card shadow mt-5" data-aos="fade-down" style="width: 20rem;">
             <div class="card-body">
               <div align="center" class="mt-3 mb-2">
-                <img src="img/kune-logo.svg" width="140" alt="Kune">
+                <img src="~/assets/img/kune-logo.svg" width="140" alt="Kune">
               </div>
               <br>
               <form>
@@ -26,7 +26,7 @@
                   <b>Entrar con Kune</b>
                 </button>
                 <hr>
-                <button type="submit" class="btn btn-google btn-block mb-2">
+                <button class="btn btn-google btn-block mb-2" @click="googleSignIn">
                   <img src="~/assets/img/google.png" class="google">Entrar con Google
                 </button>
                 <br>
@@ -43,28 +43,18 @@
 export default {
   name: 'Login',
   methods: {
-    renderButton () {
-      gapi.signin2.render('signin', {
-        scope: 'profile email',
-        width: 185,
-        height: 35,
-        longtitle: true,
-        onsuccess: onSignIn,
-        onfailure: onFailure
-      })
+    async googleSignIn (e) {
+      e.preventDefault()
+      const res = await this.$auth.loginWith('google')
+      // eslint-disable-next-line no-console
+      console.log(res)
     },
     onSignIn (googleUser) {
-      const profile = googleUser.getBasicProfile()
-      const id_token = googleUser.getAuthResponse().id_token
-
-      console.log(id_token)
-      console.log('ID: ' + profile.getId())
-      console.log('Name: ' + profile.getName())
-      console.log('Image Url: ' + profile.getImageUrl())
-      console.log('Email: ' + profile.getEmail())
+      // const idToken = googleUser.getAuthResponse().id_token
     },
     onSuccess (googleUser) {
-      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+      // eslint-disable-next-line no-console
+      console.log('Logged in as: ' + googleUser.getBasicProfile().getName())
     }
   }
 }
