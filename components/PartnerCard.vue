@@ -14,7 +14,9 @@
         <Budgets :budgets="partner.budgets" clases="ml-2 rounded" />
         <br>
         <div id="botones">
-          <a :href="`partner/${partner.slug}`" class="btn btn-secondary mt-4 mb-2">Ver más</a>
+          <NuxtLink :to="`partner/${partner.slug}`" class="btn btn-secondary mt-4 mb-2">
+            Ver más
+          </NuxtLink>
           <a href="perfil-partner.html" class="btn btn-primary mt-4 mb-2">Match ahora</a>
         </div>
       </div>

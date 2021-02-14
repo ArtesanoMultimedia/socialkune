@@ -40,7 +40,7 @@ body{
 .font-icon{
   width: 15px;
   position: relative;
-  top: -1px;
+  top: -2px;
 }
 
 .nav-kune{
@@ -76,13 +76,13 @@ input[type=button], input[type=submit], input[type=reset] {outline:0 !important;
 
 .presentation--user{
   background: #fff no-repeat padding-box;
-  position: relative;
+  position: relative; 
   z-index: 100;
 }
 
 .config--user{
   background: #f8f8f8 no-repeat padding-box;
-  position: relative;
+  position: relative; 
   z-index: 100;
   border-top: 1px solid #f5f5f5 ;
 }
@@ -117,10 +117,11 @@ input[type=button], input[type=submit], input[type=reset] {outline:0 !important;
 
 .btn-primary:hover,
 .btn-primary:focus,
+.btn-primary.focus,
 .btn-primary:active {
     color: #fff;
-    background-color: #E91E63;
-    border-color: #E91E63;
+    background-color: #E91E63 !important;
+    border-color: #E91E63 !important;
 }
 
 .btn-secondary {
@@ -131,10 +132,11 @@ input[type=button], input[type=submit], input[type=reset] {outline:0 !important;
 
 .btn-secondary:hover,
 .btn-secondary:focus,
+.btn-secondary.focus,
 .btn-secondary:active {
     color: #fff;
-    background-color: #3F51B5;
-    border-color: #3F51B5;
+    background-color: #3F51B5 !important;
+    border-color: #3F51B5 !important;
 }
 
 .img-coin{
@@ -157,7 +159,78 @@ a:hover {
 }
 
 .search{
-  position: relative;
-  top: -50px;
+  position: relative; 
+  top: -50px; 
   z-index: 9999;
+}
+
+.masthead {
+  height: 30vh;
+  min-height: 300px;
+}
+
+.button-ok {
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 100px;
+}
+
+.button-ok:hover {
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 100px;
+}
+
+.button-fail {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 100px;
+}
+
+.button-fail:hover {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 100px;
+}
+
+.font-icon2{
+  width: 25px;
+  position: relative;
+  top: 5px;
 }

@@ -15,7 +15,7 @@
                   <input id="inlineFormInputGroupUsername2" type="text" class="form-control form-control-lg" placeholder="Búsqueda">
                 </div>
                 <button type="submit" class="btn btn-secondary btn-lg mt-2 mb-2">
-                  Buscar partners
+                  Buscar entidades
                 </button>
                 <a
                   class="link--pink ml-3"

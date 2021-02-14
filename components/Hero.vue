@@ -1,7 +1,7 @@
 <template>
-  <section id="hero" class="presentation--user py-5">
-    <div class="container">
-      <div class="row mt-3 mb-5">
+  <section id="hero">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
         <div class="col-12 col-xl">
           <!-- Hello -->
           <h1>{{ title }}</h1>
