@@ -10,8 +10,8 @@
           <div class="col-12 col-xl">
             <!-- Hello -->
             <h1>{{ title }}</h1>
-            <Badges :badges="badges" />
             <h4>{{ subtitle }}</h4>
+            <Badges :badges="badges" />
           </div>
           <div class="col-12 col-xl-auto">
             <h6 class="pt-3">
@@ -126,11 +126,11 @@
                         class="rounded-circle mr-2"
                         width="40"
                         alt="User"
-                      > Nombre usuario
+                      > Carlos Rodríguez
                     </h5>
                     <hr>
                     <p class="card-text limit-text-event mb-4">
-                      Usuario desde xx/xx/xxxx<br>
+                      Usuario desde 13/02/2021<br>
                     </p>
                     <!--zona badges --><img src="~/assets/img/don-1.png" width="40px" class="ml-2 rounded"><img
                       src="~/assets/img/don-2.png"
@@ -138,7 +138,7 @@
                       class="ml-2 rounded"
                     ><img src="~/assets/img/don-3.png" width="40px" class="ml-2 rounded">
                     <br>
-                    <a href="perfil-puser.html" class="btn btn-secondary mt-4 mb-2">Ver usuario</a>
+                    <NuxtLink to="/user" class="btn btn-secondary mt-4 mb-2">Ver usuario</NuxtLink>
                   </div>
                 </div>
               </div>
@@ -163,7 +163,7 @@
                       class="ml-2 rounded"
                     ><img src="~/assets/img/don-3.png" width="40px" class="ml-2 rounded">
                     <br>
-                    <a href="perfil-puser.html" class="btn btn-secondary mt-4 mb-2">Ver usuario</a>
+                    <NuxtLink to="/user" class="btn btn-secondary mt-4 mb-2">Ver usuario</NuxtLink>
                   </div>
                 </div>
               </div>
@@ -188,7 +188,7 @@
                       class="ml-2 rounded"
                     ><img src="~/assets/img/don-3.png" width="40px" class="ml-2 rounded">
                     <br>
-                    <a href="perfil-puser.html" class="btn btn-secondary mt-4 mb-2">Ver usuario</a>
+                    <NuxtLink to="/user" class="btn btn-secondary mt-4 mb-2">Ver usuario</NuxtLink>
                   </div>
                 </div>
               </div>

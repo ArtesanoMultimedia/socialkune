@@ -11,8 +11,8 @@
               <br>
               <form>
                 <div align="left" class="form-group">
-                  <label for="exampleInputEmail1">Email</label>
-                  <input id="exampleInputEmail1" type="email" class="form-control" aria-describedby="emailHelp">
+                  <label for="username">Usuario</label>
+                  <input id="username" type="text" class="form-control">
                 </div>
                 <div align="left" class="form-group">
                   <label for="exampleInputPassword1">Contraseña</label>
@@ -22,9 +22,7 @@
                   <input id="exampleCheck1" type="checkbox" class="form-check-input">
                   <label class="form-check-label" for="exampleCheck1">Recordarme</label>
                 </div>
-                <button type="submit" class="btn btn-primary btn-block">
-                  <b>Entrar con Kune</b>
-                </button>
+                <b-button router to="/user" class="btn btn-primary btn-block">Entrar con Kune</b-button>
                 <hr>
                 <button class="btn btn-google btn-block mb-2" @click="googleSignIn">
                   <img src="~/assets/img/google.png" class="google">Entrar con Google
@@ -48,6 +46,12 @@ export default {
       const res = await this.$auth.loginWith('google')
       // eslint-disable-next-line no-console
       console.log(res)
+    },
+    kuneSignIn (e) {
+      e.preventDefault()
+      this.$router.push({
+        path: '/login'
+      })
     },
     onSignIn (googleUser) {
       // const idToken = googleUser.getAuthResponse().id_token

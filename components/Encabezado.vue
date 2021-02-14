@@ -17,7 +17,7 @@
               <NuxtLink v-if="loggedIn" class="nav-link" to="/user/edit">
                 <span class="name--mobile">Carlos Rodríguez</span><img src="~/assets/img/user.png" class="rounded-circle ml-4 img-user" width="40" alt="User">
               </NuxtLink>
-              <NuxtLink v-else class="nav-link" to="/user">
+              <NuxtLink v-else class="nav-link" to="/login">
                 <i data-feather="lock" class="font-icon" /> <span>Entrar</span>
               </NuxtLink>
             </div>
