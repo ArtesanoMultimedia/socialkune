@@ -1,73 +1,93 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        socialkune
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+  <div>
+    <Encabezado :logged-in="false" />
+    <Hero :title="title" :subtitle="subtitle" :budgets="budgets" />
+    <Search />
+    <PartnerList partners-title="👉 Las entidades más destacados" :partners="partnersDestacados" />
+    <PartnerList partners-title="👉 Las TOP de las 17 ODS" :partners="partnersTop17" />
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  async asyncData ({ params, $http }) {
+    const resDestacados = await $http.get('https://socialhack-back.herokuapp.com/partner/list')
+    const partnersDestacados = await resDestacados.json()
+    const resTop17 = await $http.get('https://socialhack-back.herokuapp.com/partner/list')
+    const partnersTop17 = await resTop17.json()
+    return { partnersDestacados, partnersTop17 }
+  },
+  data () {
+    return {
+      partnersDestacados: [],
+      title: '👋 Bienvenid@ a kune',
+      subtitle: 'Empodera, empatiza y cambiarás el mundo',
+      budgets: [],
+      partnersTop17: [
+        {
+          partner_id: 1,
+          delay: 100,
+          name: 'Nombre partner 1'
+        },
+        {
+          partner_id: 2,
+          delay: 200,
+          name: 'Nombre partner 2'
+        },
+        {
+          partner_id: 3,
+          delay: 300,
+          name: 'Nombre partner 3'
+        }
+      ]
+    }
+  }
+}
+/*
+partnersDestacados: [
+  {
+    partner_id: 1,
+    delay: 100,
+    iniciales: 'CR',
+    name: 'Cruz Roja',
+    budgets: [
+      { budget_id: 1, src: '1-col.png' },
+      { budget_id: 2, src: '2-col.png' },
+      { budget_id: 3, src: '3-col.png' },
+      { budget_id: 4, src: 'S-WEB-Goal-02.png' },
+      { budget_id: 5, src: 'S-WEB-Goal-03.png' }
+    ]
+  },
+  {
+    partner_id: 2,
+    delay: 200,
+    iniciales: 'CA',
+    name: 'Cáritas',
+    budgets: [
+      { budget_id: 1, src: '1-col.png' },
+      { budget_id: 2, src: '2-col.png' },
+      { budget_id: 3, src: 'S-WEB-Goal-01.png' }
+    ]
+  },
+  {
+    partner_id: 3,
+    delay: 300,
+    iniciales: 'BA',
+    name: 'Banco de Alimentos',
+    budgets: [
+      { budget_id: 1, src: '1-col.png' },
+      { budget_id: 2, src: '2-col.png' },
+      { budget_id: 3, src: '3-col.png' },
+      { budget_id: 3, src: 'S-WEB-Goal-05.png' },
+      { budget_id: 3, src: 'S-WEB-Goal-08.png' }
+    ]
+  }
+],
+*/
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+#hero h1 {
+  font-size: 60px !important;
 }
 </style>

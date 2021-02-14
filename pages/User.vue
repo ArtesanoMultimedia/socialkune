@@ -1,25 +1,7 @@
 <template>
   <div>
-    <section class="presentation--user py-5">
-      <div class="container">
-        <div class="row mt-3 mb-5">
-          <div class="col-12 col-xl">
-            <!-- Hello -->
-            <h1>
-              😎 Carlos Rodríguez <!--zona badges --><img src="~/assets/img/don-1.png" width="60px" class="ml-4"><img
-                src="~/assets/img/don-2.png"
-                width="60px"
-                class="ml-4"
-              >
-            </h1>
-            <h4>Miembro desde el 03/01/2021.</h4>
-          </div>
-          <div class="col-12 col-xl-auto">
-            <h6 class="pt-3">Domingo, 14 de Febrero</h6>
-          </div>
-        </div>
-      </div>
-    </section>
+    <Encabezado :logged-in="true" />
+    <Hero :title="title" :subtitle="subtitle" :budgets="budgets" />
     <section class="config--user py-5">
       <div class="container">
         <ul id="pills-tab" class="nav nav-pills mb-3" role="tablist">
@@ -80,7 +62,6 @@
                   </div>
                 </div>
               </div>
-
               <div class="col-xl-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="card shadow mb-4">
                   <div class="card-body">
@@ -117,7 +98,23 @@
 
 <script>
 export default {
-  name: 'User'
+  name: 'User',
+  data () {
+    return {
+      title: '😎 Carlos Rodríguez',
+      subtitle: 'Miembro desde 13/02/2021',
+      budgets: [
+        {
+          id: 0,
+          src: 'don-1.png'
+        },
+        {
+          id: 1,
+          src: 'don-2.png'
+        }
+      ]
+    }
+  }
 }
 </script>
 
