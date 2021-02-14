@@ -10,7 +10,7 @@
           <div class="col-12 col-xl">
             <!-- Hello -->
             <h1>{{ title }}</h1>
-            <Budgets :budgets="budgets" />
+            <Badges :badges="badges" />
             <h4>{{ subtitle }}</h4>
           </div>
           <div class="col-12 col-xl-auto">
@@ -315,19 +315,19 @@ export default {
     const partner = json.partner
     const title = '💼 ' + partner.name
     const subtitle = `Miembro desde ${partner.created_at}`
-    const budgets = partner.budgets
+    const badges = partner.badges
     return {
       partner,
       title,
       subtitle,
-      budgets
+      badges
     }
   },
   data () {
     return {
       title: '',
       subtitle: 'Miembro desde 13/02/2021',
-      budgets: [],
+      badges: [],
       partner: {}
     }
   }

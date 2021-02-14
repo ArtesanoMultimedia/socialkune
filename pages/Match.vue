@@ -1,7 +1,7 @@
 <template>
   <div>
     <Encabezado :logged-in="true" />
-    <Hero title="🤔 Ahora vamos a “Matchear”" subtitle="Es muy fácil y muy divertido" :budgets="[]" />
+    <Hero title="🤔 Ahora vamos a “Matchear”" subtitle="Es muy fácil y muy divertido" :badges="[]" />
     <section class="config--user py-5">
       <div class="container">
         <div class="row">
@@ -17,7 +17,7 @@
                 <p class="card-text limit-text-event mb-4">
                   {{ currentPartner.description }}<br>
                 </p>
-                <Budgets :budgets="currentPartner.budgets" clases="ml-2 rounded" />
+                <Badges :badges="currentPartner.badges" clases="ml-2 rounded" />
                 <br><br>
               </div>
             </div>

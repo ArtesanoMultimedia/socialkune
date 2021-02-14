@@ -11,7 +11,7 @@
           {{ partner.description }}<br>
         </p>
         <!--zona badges -->
-        <Budgets :budgets="partner.budgets" clases="ml-2 rounded" />
+        <Badges :badges="partner.badges" clases="ml-2 rounded" />
         <br>
         <div id="botones">
           <NuxtLink :to="`partner/${partner.slug}`" class="btn btn-secondary mt-4 mb-2">

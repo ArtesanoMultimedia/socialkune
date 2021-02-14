@@ -1,7 +1,7 @@
 <template>
   <div>
     <Encabezado :logged-in="false" />
-    <Hero :title="title" :subtitle="subtitle" :budgets="budgets" clase="home-feed" />
+    <Hero :title="title" :subtitle="subtitle" :badges="badges" clase="home-feed" />
     <Search />
     <PartnerList partners-title="👉 Las entidades más destacadas" :partners="partnersDestacados" />
     <PartnerList partners-title="👉 Las TOP de las 17 ODS" :partners="partnersTop17" />
@@ -22,7 +22,7 @@ export default {
       partnersDestacados: [],
       title: '👋 Bienvenid@ a kune',
       subtitle: 'Empodera, empatiza y cambiarás el mundo',
-      budgets: [],
+      badges: [],
       partnersTop17: [
         {
           partner_id: 1,
@@ -50,12 +50,12 @@ partnersDestacados: [
     delay: 100,
     iniciales: 'CR',
     name: 'Cruz Roja',
-    budgets: [
-      { budget_id: 1, src: '1-col.png' },
-      { budget_id: 2, src: '2-col.png' },
-      { budget_id: 3, src: '3-col.png' },
-      { budget_id: 4, src: 'S-WEB-Goal-02.png' },
-      { budget_id: 5, src: 'S-WEB-Goal-03.png' }
+    badges: [
+      { badge_id: 1, src: '1-col.png' },
+      { badge_id: 2, src: '2-col.png' },
+      { badge_id: 3, src: '3-col.png' },
+      { badge_id: 4, src: 'S-WEB-Goal-02.png' },
+      { badge_id: 5, src: 'S-WEB-Goal-03.png' }
     ]
   },
   {
@@ -63,10 +63,10 @@ partnersDestacados: [
     delay: 200,
     iniciales: 'CA',
     name: 'Cáritas',
-    budgets: [
-      { budget_id: 1, src: '1-col.png' },
-      { budget_id: 2, src: '2-col.png' },
-      { budget_id: 3, src: 'S-WEB-Goal-01.png' }
+    badges: [
+      { badge_id: 1, src: '1-col.png' },
+      { badge_id: 2, src: '2-col.png' },
+      { badge_id: 3, src: 'S-WEB-Goal-01.png' }
     ]
   },
   {
@@ -74,12 +74,12 @@ partnersDestacados: [
     delay: 300,
     iniciales: 'BA',
     name: 'Banco de Alimentos',
-    budgets: [
-      { budget_id: 1, src: '1-col.png' },
-      { budget_id: 2, src: '2-col.png' },
-      { budget_id: 3, src: '3-col.png' },
-      { budget_id: 3, src: 'S-WEB-Goal-05.png' },
-      { budget_id: 3, src: 'S-WEB-Goal-08.png' }
+    badges: [
+      { badge_id: 1, src: '1-col.png' },
+      { badge_id: 2, src: '2-col.png' },
+      { badge_id: 3, src: '3-col.png' },
+      { badge_id: 3, src: 'S-WEB-Goal-05.png' },
+      { badge_id: 3, src: 'S-WEB-Goal-08.png' }
     ]
   }
 ],

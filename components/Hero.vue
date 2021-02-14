@@ -8,7 +8,7 @@
             {{ title }}
           </h1>
           <h3>{{ subtitle }}</h3>
-          <Budgets :budgets="budgets" />
+          <Badges :badges="badges" />
         </div>
         <div class="col-12 col-xl-auto">
           <h6 class="pt-5">
@@ -36,7 +36,7 @@ export default {
       type: String,
       default: ''
     },
-    budgets: {
+    badges: {
       type: Array,
       default: () => []
     }

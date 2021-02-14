@@ -1,7 +1,7 @@
 <template>
   <div>
     <Encabezado :logged-in="true" />
-    <Hero :title="title" :subtitle="subtitle" :budgets="budgets" />
+    <Hero :title="title" :subtitle="subtitle" :badges="badges" />
     <section class="config--user py-5">
       <div class="container">
         <ul id="pills-tab" class="nav nav-pills mb-3" role="tablist">
@@ -103,7 +103,7 @@ export default {
     return {
       title: '😎 Carlos Rodríguez',
       subtitle: 'Miembro desde 13/02/2021',
-      budgets: [
+      badges: [
         {
           id: 0,
           src: 'don-1.png'

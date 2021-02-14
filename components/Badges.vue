@@ -1,9 +1,9 @@
 <template>
-  <div v-if="budgets.length > 0" id="budgets">
+  <div v-if="badges.length > 0" id="badges">
     <img
-      v-for="budget in budgets"
-      :key="budget.budget_id"
-      :src="require(`~/assets/img/${budget.src}`)"
+      v-for="badge in badges"
+      :key="badge.badge_id"
+      :src="require(`~/assets/img/${badge.src}`)"
       width="40px"
       :class="clases"
       alt=""
@@ -13,9 +13,9 @@
 
 <script>
 export default {
-  name: 'Budgets',
+  name: 'Badges',
   props: {
-    budgets: {
+    badges: {
       type: Array,
       default: () => []
     },
@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style scoped>
-#budgets {
+#badges {
   display: inline-block;
   margin-top: 10px;
 }
