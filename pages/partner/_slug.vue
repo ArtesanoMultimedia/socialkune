@@ -15,7 +15,7 @@
           </div>
           <div class="col-12 col-xl-auto">
             <h6 class="pt-3">
-              Domingo, 14 de Febrero
+              {{ $moment().format('dddd, DD [de] MMMM') }}
             </h6>
           </div>
         </div>

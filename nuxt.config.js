@@ -1,3 +1,5 @@
+const webpack = require('webpack')
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -12,14 +14,12 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css', integrity: 'sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l', crossorigin: 'anonymous' },
+      { rel: 'stylesheet', href: '~/node_modules/bootstrap/dist/css/bootstrap.css' },
       { rel: 'stylesheet', href: 'https://use.typekit.net/grd3eab.css' },
       { rel: 'stylesheet', href: 'https://unpkg.com/aos@next/dist/aos.css' }
     ],
     script: [
       { src: 'https://unpkg.com/feather-icons', body: true },
-      { src: 'https://code.jquery.com/jquery-3.5.1.slim.min.js', integrity: 'sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj', crossorigin: 'anonymous', body: true },
-      { src: 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js', integrity: 'sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns', crossorigin: 'anonymous', body: true },
       { src: 'https://unpkg.com/aos@next/dist/aos.js', body: true },
       { src: '/js/script.js', body: true }
     ]
@@ -50,16 +50,32 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxt/http',
-    '@nuxtjs/auth-next'
+    '@nuxtjs/auth-next',
+    '@nuxtjs/moment'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
 
+  moment: {
+    locales: ['es']
+  },
+
   http: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    /**
+     * add external plugins
+     */
+    vendor: ['jquery', 'bootstrap'],
+    plugins: [
+      new webpack.ProvidePlugin({
+        jQuery: 'jquery',
+        $: 'jquery',
+        'window.jQuery': 'jquery'
+      })
+    ]
   },
 
   auth: {

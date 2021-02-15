@@ -14,11 +14,15 @@
     "@nuxt/http": "^0.6.2",
     "@nuxtjs/auth-next": "^5.0.0-1612791489.a5d8c28",
     "@nuxtjs/axios": "^5.12.5",
+    "@nuxtjs/moment": "^1.6.1",
     "bootstrap": "^4.6.0",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.8.3",
+    "jquery": "^3.5.1",
     "nuxt": "^2.14.12",
-    "vue-google-signin-button": "^1.0.4"
+    "popper.js": "^1.16.1",
+    "vue-google-signin-button": "^1.0.4",
+    "vue-moment": "^4.1.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^5.0.0",

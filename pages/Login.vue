@@ -22,7 +22,9 @@
                   <input id="exampleCheck1" type="checkbox" class="form-check-input">
                   <label class="form-check-label" for="exampleCheck1">Recordarme</label>
                 </div>
-                <b-button router to="/user" class="btn btn-primary btn-block">Entrar con Kune</b-button>
+                <b-button router to="/user" class="btn btn-primary btn-block">
+                  Entrar con Kune
+                </b-button>
                 <hr>
                 <button class="btn btn-google btn-block mb-2" @click="googleSignIn">
                   <img src="~/assets/img/google.png" class="google">Entrar con Google
