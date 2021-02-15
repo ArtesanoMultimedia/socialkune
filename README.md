@@ -1,4 +1,8 @@
-# socialkune
+# kune
+
+* Demo pública de la aplicación: https://socialkune.herokuapp.com/
+* Repositorio del backend: https://github.com/jimixjay/socialkune
+
 
 ## Build Setup
 
